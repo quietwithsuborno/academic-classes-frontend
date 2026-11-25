@@ -5,7 +5,8 @@ import { getLocale } from "next-intl/server";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
 
-// বাংলা ও English দুটোর জন্য Hind Siliguri (wireframe-এর font)
+export const instant = false;
+
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali", "latin"],
   weight: ["400", "500", "600", "700"],
