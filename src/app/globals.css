@@ -61,7 +61,7 @@
   --popover: #ffffff;
   --popover-foreground: #222222;
 
-  --primary: #cc0064;               /* brand pink; white text = 5.60:1 */
+  --primary: #cc0066;               /* brand pink; white text = 5.60:1 */
   --primary-foreground: #ffffff;
   --secondary: #fdeef5;             /* হালকা pink পটভূমি */
   --secondary-foreground: #b6005b;  /* 5.96:1 */
@@ -73,7 +73,7 @@
 
   --border: #dcdcdc;
   --input: #b0b0b0;
-  --ring: #cc0064;
+  --ring: #cc0066;
 
   --brand-bright: #ea205d;          /* gradient-এর দুই প্রান্ত */
   --brand-deep: #b6005b;            /* gradient-এর মাঝখান */
@@ -88,12 +88,12 @@
 
   --sidebar: #fafafa;
   --sidebar-foreground: #222222;
-  --sidebar-primary: #cc0064;
+  --sidebar-primary: #cc0066;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #fdeef5;
   --sidebar-accent-foreground: #b6005b;
   --sidebar-border: #dcdcdc;
-  --sidebar-ring: #cc0064;
+  --sidebar-ring: #cc0066;
 }
 
 /* ---------- Dark mode ---------- */
