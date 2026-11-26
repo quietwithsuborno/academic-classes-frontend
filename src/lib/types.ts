@@ -76,3 +76,48 @@ export interface Stat {
   /** System নিজে গুনবে, দিনে একবার হালনাগাদ (Spec section 5) */
   value: number;
 }
+
+// ---------- দুই ভাষার লেখা (D-30) ----------
+
+/**
+ * Admin-এর লেখা যে content দুই ভাষায় রাখা হয়।
+ * `en` ঐচ্ছিক: Admin English না লিখলে English mode-এও বাংলাটা দেখায়।
+ */
+export interface LocalizedText {
+  bn: string;
+  en?: string;
+}
+
+// ---------- শ্রেণি (Spec section 6, D-04) ----------
+
+export interface Grade {
+  id: string;
+  /** URL ও filter-এ ব্যবহারের ছোট নাম, যেমন "ssc" */
+  slug: string;
+  /** Admin-এর লেখা নাম, দুই ভাষায় (D-30) */
+  name: LocalizedText;
+  /** এক লাইনের ছোট বর্ণনা, দুই ভাষায় (D-30) */
+  description: LocalizedText;
+  /** Admin-এর upload করা icon; না থাকলে সাধারণ icon দেখানো হয় */
+  iconUrl: string | null;
+  /** ছোট সংখ্যা আগে দেখায় */
+  sortOrder: number;
+}
+
+// ---------- কোর্স (Spec 2.3, 2.5) ----------
+
+export interface Course {
+  id: string;
+  slug: string;
+  /** কোন শ্রেণির (Grade.slug) */
+  gradeSlug: string;
+  /** Admin-এর লেখা নাম, দুই ভাষায় (D-30; client-এর সিদ্ধান্ত বাকি) */
+  title: LocalizedText;
+  imageUrl: string;
+  /** টাকায়; ০ মানে ফ্রি কোর্স */
+  price: number;
+  lectureCount: number;
+  /** ৫-এর মধ্যে, যেমন 4.8 */
+  rating: number;
+  enrolledCount: number;
+}

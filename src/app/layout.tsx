@@ -27,7 +27,9 @@ export default async function RootLayout({
 
   return (
     // suppressHydrationWarning: next-themes <html>-এ "dark" class বসায়, তাই দরকার
-    <html lang={locale} suppressHydrationWarning>
+    // data-scroll-behavior: globals.css-এ smooth scroll চালু; Next.js page বদলের সময়
+    // সেটা সাময়িক বন্ধ রাখে, যাতে নতুন page লাফিয়ে না গিয়ে সোজা উপরে খোলে (D-28)
+    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={`${hindSiliguri.variable} font-sans antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider>

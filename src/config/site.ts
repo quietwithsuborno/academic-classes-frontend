@@ -67,3 +67,14 @@ export const quickActions: Record<AuthStatus, QuickAction[]> = {
     { key: "examLeaderboard", href: openQuestionConfig.examLeaderboardHref, emphasis: "outline" },
   ],
 };
+
+// ---------- Course card-এর ঐচ্ছিক তথ্য (Spec 2.5, D-31) ----------
+// Admin panel থেকে চালু/বন্ধ হবে; আপাতত এখানে। তিনটাই false হলে card-এ পুরো লাইনটা সরে যায়।
+export const courseCardSettings = {
+  showLectureCount: true,
+  showRating: true,
+  showEnrolledCount: true,
+};
+
+// Home-এ কোর্সসমূহ section-এ কয়টা card (Spec 2.3): mobile-এ ২, desktop-এ ৪
+export const HOME_COURSE_LIMIT = 4;

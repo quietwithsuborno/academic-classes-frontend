@@ -1,3 +1,6 @@
+import { CoursesSection } from "@/components/home/courses-section";
+import { GradeFilterProvider } from "@/components/home/grade-filter-context";
+import { GradesSection } from "@/components/home/grades-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { StatsSection } from "@/components/home/stats-section";
 
@@ -7,6 +10,11 @@ export default function HomePage() {
     <main>
       <HeroSection />
       <StatsSection />
+      {/* শ্রেণি আর কোর্সসমূহ একই filter ভাগ করে, তাই একই provider-এর ভেতরে */}
+      <GradeFilterProvider>
+        <GradesSection />
+        <CoursesSection />
+      </GradeFilterProvider>
     </main>
   );
 }

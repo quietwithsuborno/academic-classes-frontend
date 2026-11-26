@@ -150,6 +150,15 @@
     @apply font-sans;
   }
 }
+/* ---------- Page-এর ভেতরে মসৃণ scroll (D-28) ---------- */
+/* "#courses"-এর মতো link চাপলে page লাফ না দিয়ে মসৃণভাবে নামে (B-08)।
+   Reduce motion চালু থাকলে স্বাভাবিক লাফ। */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* ---------- Hero-র পেছনে ভেসে ওঠা icon (D-25) ---------- */
 /* Tailwind-এর নিজস্ব পথ: @theme-এ --animate-* দিলে Tailwind নিজেই
    `animate-float-up` class বানায় আর keyframe output-এ রাখে।
