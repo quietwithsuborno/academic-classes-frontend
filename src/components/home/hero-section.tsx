@@ -21,7 +21,7 @@ export async function HeroSection() {
     >
       {/* ভেসে ওঠা icon (z-[1]): banner-এর (z-0) উপর দিয়েও যায়, button-এর (z-[2]) নিচ দিয়ে */}
       <HeroBackground />
-      <div className="relative mx-auto flex max-w-[1200px] flex-col gap-3.5 px-4 pt-5 pb-7 lg:flex-row lg:items-center lg:gap-10 lg:px-6 lg:py-8">
+      <div className="relative mx-auto flex max-w-[1200px] flex-col gap-3.5 px-4 pt-5 pb-7 lg:flex-row lg:items-center lg:gap-10 lg:px-6 lg:pt-8 lg:pb-12">
         {/* Banner: mobile-এ উপরে, desktop-এ ডানে (lg:order-2)।
             Desktop-এ button-এর অংশ শুধু নিজের মাপের জায়গা নেয় (flex-none),
             বাকি সব জায়গা banner পায় (flex-1), তাই বাম দিকে ফাঁকা থাকে না। */}

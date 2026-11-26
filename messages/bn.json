@@ -23,5 +23,12 @@
     "booksExternalLabel": "বই ও স্টেশনারি, অন্য ওয়েবসাইট নতুন ট্যাবে খুলবে",
     "ebook": "ই-বুক",
     "browseCourses": "কোর্সগুলো দেখুন"
+  },
+  "Stats": {
+    "sectionLabel": "সংখ্যায় আমরা",
+    "students": "শিক্ষার্থী",
+    "courses": "কোর্স",
+    "mentors": "মেন্টর",
+    "videoLectures": "ভিডিও লেকচার"
   }
 }

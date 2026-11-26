@@ -66,3 +66,13 @@ export interface Banner {
   /** Banner চাপলে কোথায় যাবে (যেমন কোনো course); না থাকলে null */
   href: string | null;
 }
+
+// ---------- সংখ্যার সারি (Spec section 5) ----------
+
+export type StatKey = "students" | "courses" | "mentors" | "videoLectures";
+
+export interface Stat {
+  key: StatKey;
+  /** System নিজে গুনবে, দিনে একবার হালনাগাদ (Spec section 5) */
+  value: number;
+}

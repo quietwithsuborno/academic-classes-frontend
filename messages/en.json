@@ -23,5 +23,12 @@
     "booksExternalLabel": "Books & Stationery, opens another website in a new tab",
     "ebook": "E-book",
     "browseCourses": "Browse courses"
+  },
+  "Stats": {
+    "sectionLabel": "Our numbers",
+    "students": "Students",
+    "courses": "Courses",
+    "mentors": "Mentors",
+    "videoLectures": "Video lectures"
   }
 }
