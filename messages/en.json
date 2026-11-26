@@ -1,5 +1,20 @@
 {
   "Home": {
     "setupCheck": "Setup is working! Academic Classes"
+  },
+  "Header": {
+    "mainNav": "Main menu",
+    "nav": {
+      "courses": "Courses",
+      "mentors": "Mentors"
+    },
+    "openMenu": "Open menu",
+    "menuTitle": "Menu",
+    "switchLanguage": "Change language",
+    "toggleTheme": "Switch dark or light mode",
+    "cart": "Cart",
+    "login": "Login",
+    "dashboard": "Dashboard",
+    "profile": "Profile"
   }
 }
