@@ -1,7 +1,4 @@
 {
-  "Home": {
-    "setupCheck": "সেটআপ ঠিক আছে! একাডেমিক ক্লাসেস"
-  },
   "Header": {
     "mainNav": "প্রধান মেনু",
     "nav": {
@@ -16,5 +13,15 @@
     "login": "লগইন",
     "dashboard": "ড্যাশবোর্ড",
     "profile": "প্রোফাইল"
+  },
+  "Hero": {
+    "sectionLabel": "পরিচিতি",
+    "bannerRegion": "চলতি কোর্সের ব্যানার",
+    "prevBanner": "আগের ব্যানার",
+    "nextBanner": "পরের ব্যানার",
+    "booksAndStationery": "বই ও স্টেশনারি",
+    "booksExternalLabel": "বই ও স্টেশনারি, অন্য ওয়েবসাইট নতুন ট্যাবে খুলবে",
+    "ebook": "ই-বুক",
+    "browseCourses": "কোর্সগুলো দেখুন"
   }
 }

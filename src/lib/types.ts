@@ -54,3 +54,15 @@ export interface QuickAction {
   /** primary = গাঢ় রঙের (প্রথম button), outline = বাকি দুটো */
   emphasis: "primary" | "outline";
 }
+
+// ---------- Banner slider (Spec section 2, FR-WEB-05) ----------
+
+export interface Banner {
+  id: string;
+  /** ছবি Admin upload করবেন; 16:9 অনুপাত */
+  imageUrl: string;
+  /** ছবির বর্ণনা (screen reader-এর জন্য); Admin-এর লেখা, যে ভাষায় লেখা সেভাবেই দেখায় */
+  alt: string;
+  /** Banner চাপলে কোথায় যাবে (যেমন কোনো course); না থাকলে null */
+  href: string | null;
+}

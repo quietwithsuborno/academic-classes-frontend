@@ -150,3 +150,43 @@
     @apply font-sans;
   }
 }
+/* ---------- Hero-র পেছনে ভেসে ওঠা icon (D-25) ---------- */
+/* Tailwind-এর নিজস্ব পথ: @theme-এ --animate-* দিলে Tailwind নিজেই
+   `animate-float-up` class বানায় আর keyframe output-এ রাখে।
+   `inline` জরুরি: তাহলে প্রতিটা icon-এর নিজের --float-* মান কাজে লাগে। */
+@theme inline {
+  --animate-float-up: float-up var(--float-duration, 16s) linear
+    var(--float-delay, 0s) infinite;
+
+  @keyframes float-up {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+    }
+    12%,
+    82% {
+      opacity: var(--float-opacity, 0.2);
+    }
+    100% {
+      transform: translateY(var(--float-distance, -640px))
+        rotate(var(--float-rotate, 20deg));
+      opacity: 0;
+    }
+  }
+}
+
+/* ---------- Hero button-এর pink আভা (B-12) ---------- */
+/* Hover বা keyboard focus-এ button-এর চারপাশ থেকে বাইরের দিকে pink আলো ছড়ায়।
+   রং --primary থেকে, তাই dark mode-এ নিজে থেকে উজ্জ্বল pink হয়। */
+.hero-glow {
+  transition:
+    translate 200ms ease-out,
+    box-shadow 250ms ease-out;
+}
+.hero-glow:hover,
+.hero-glow:focus-visible {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--primary) 40%, transparent),
+    0 0 18px 2px color-mix(in srgb, var(--primary) 45%, transparent),
+    0 0 42px 10px color-mix(in srgb, var(--primary) 22%, transparent);
+}

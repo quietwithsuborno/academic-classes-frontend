@@ -1,7 +1,4 @@
 {
-  "Home": {
-    "setupCheck": "Setup is working! Academic Classes"
-  },
   "Header": {
     "mainNav": "Main menu",
     "nav": {
@@ -16,5 +13,15 @@
     "login": "Login",
     "dashboard": "Dashboard",
     "profile": "Profile"
+  },
+  "Hero": {
+    "sectionLabel": "Introduction",
+    "bannerRegion": "Current course banners",
+    "prevBanner": "Previous banner",
+    "nextBanner": "Next banner",
+    "booksAndStationery": "Books & Stationery",
+    "booksExternalLabel": "Books & Stationery, opens another website in a new tab",
+    "ebook": "E-book",
+    "browseCourses": "Browse courses"
   }
 }

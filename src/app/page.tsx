@@ -1,13 +1,10 @@
-import { getTranslations } from "next-intl/server";
+import { HeroSection } from "@/components/home/hero-section";
 
-// Step 1-এর শুধু test page: font, ভাষা আর Tailwind ঠিকমতো কাজ করছে কিনা দেখার জন্য।
-// Step 2 থেকে আসল Home page এখানে বসবে।
-export default async function HomePage() {
-  const t = await getTranslations("Home");
-
+// P-01 Home page। Section-গুলো একে একে যোগ হবে (Spec 2.3-এর ক্রমে)।
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center p-6">
-      <h1 className="text-2xl font-bold">{t("setupCheck")}</h1>
+    <main>
+      <HeroSection />
     </main>
   );
 }
