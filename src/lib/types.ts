@@ -121,3 +121,50 @@ export interface Course {
   rating: number;
   enrolledCount: number;
 }
+
+// ---------- মেন্টর (Spec 2.3 #8, FR-WEB-02) ----------
+
+export interface Mentor {
+  id: string;
+  /** Mentor Details page-এর (P-12) URL-এ ব্যবহারের ছোট নাম */
+  slug: string;
+  /** Admin-এর লেখা, দুই ভাষায় (D-30) */
+  name: LocalizedText;
+  /** কোন বিষয় পড়ান */
+  subject: LocalizedText;
+  /** কোন বিশ্ববিদ্যালয় থেকে graduation */
+  university: LocalizedText;
+  /** ছবি Admin upload করবেন; ১:১ অনুপাত */
+  photoUrl: string;
+  /** Home-এ ছোট সংখ্যা আগে দেখায় (কোন ৪ জন: খোলা প্রশ্ন UI-19) */
+  sortOrder: number;
+}
+
+// ---------- শিক্ষার্থীদের মতামত (Spec 2.3 #9, FR-REV-01) ----------
+
+/**
+ * Course review থেকে Admin-এর বাছাই করা মতামত।
+ * রিভিউয়ের লেখা আর নাম শিক্ষার্থী যেভাবে লিখেছে সেভাবেই থাকে (অনুবাদ হয় না)।
+ */
+export interface Testimonial {
+  id: string;
+  /** ১ থেকে ৫, পূর্ণসংখ্যা */
+  rating: number;
+  text: string;
+  studentName: string;
+  /** ছবি না থাকলে null; তখন নামের প্রথম অক্ষর দেখায় */
+  studentAvatarUrl: string | null;
+  /** কোন কোর্সের review (Course.slug); কোর্সের নাম সেখান থেকে চালু ভাষায় আসে */
+  courseSlug: string;
+}
+
+// ---------- সাধারণ জিজ্ঞাসা (Spec 2.3 #10) ----------
+
+export interface FaqItem {
+  id: string;
+  /** Admin-এর লেখা, দুই ভাষায় (D-30) */
+  question: LocalizedText;
+  answer: LocalizedText;
+  /** ছোট সংখ্যা আগে; প্রথমটা page খোলার সময় খোলা থাকে */
+  sortOrder: number;
+}

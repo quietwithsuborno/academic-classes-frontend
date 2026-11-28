@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hind_Siliguri } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
@@ -36,6 +37,8 @@ export default async function RootLayout({
             {/* সব page-এ একই header (D-18) */}
             <Header />
             {children}
+            {/* সব page-এ একই footer (D-47) */}
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
